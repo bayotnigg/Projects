@@ -20,6 +20,10 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"
+		/>
 		<title>Us :&lt;</title>
 	</head>
 	<body>
@@ -33,6 +37,17 @@
 				</div>
 				<!-- Nav bar -->
 				<header>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="40px"
+						viewBox="0 -960 960 960"
+						width="40px"
+						fill="#e8eaed"
+					>
+						<path
+							d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+						/>
+					</svg>
 					<div class="title">
 						<a href="leigh.html" target="_blank" class="links">
 							<p class="montserrat-bold">LEIGH</p>
@@ -108,9 +123,22 @@
 					<p class="text-main poppins-regular">
 						Made on the 5th of December 2024, made from love and connection
 						between us both, it is a platform sending indirect messages through
-						songs; a favorite of us both.
+						songs; a favorite of us :&gt;.
 					</p>
+					<div class="button-housing-second">
+						<div type="button" class="collapsible blur montserrat-bold">
+							View Playlist :&gt;
+						</div>
+						<button
+							type="button"
+							class="collapsible montserrat-bold"
+							id="collapsible"
+						>
+							View Playlist :&gt;
+						</button>
+					</div>
 					<iframe
+						class="content"
 						id="playlist"
 						src="https://open.spotify.com/embed/playlist/07yq3uo88OcXJXLG4U5PIz?utm_source=generator"
 						width="100%"
@@ -123,5 +151,6 @@
 				</div>
 			</main>
 		</div>
+		<script src="index.js"></script>
 	</body>
 </html>
