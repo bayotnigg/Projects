@@ -60,7 +60,7 @@ html {
 
 .yay {
 	writing-mode: vertical-lr;
-	margin-left: 55px;
+	margin-left: 45px;
 	color: rgba(255, 255, 255, 0.164);
 	position: inherit;
 }
@@ -99,6 +99,11 @@ header {
 	text-decoration: none;
 }
 
+.title a:active,
+.inner-navbar a:active {
+	transform: translateY(2px);
+}
+
 .links {
 	transition: all 0.2s;
 }
@@ -118,17 +123,21 @@ main {
 	gap: 1rem;
 }
 
-.button-housing {
+.button-housing,
+.button-housing-second {
 	width: 100%;
 	display: flex;
+	max-height: fit-content;
+}
+
+.button-housing {
 	justify-content: center;
 	align-items: end;
-	max-height: fit-content;
-	height: 150px;
+	padding-top: 80px;
 }
 
 .next-page {
-	padding: 15px;
+	padding: var(--size-padding);
 	border-radius: var(--size-small);
 	border: solid 5px rgb(221, 177, 241);
 	cursor: pointer;
@@ -140,9 +149,6 @@ main {
 	font-size: var(--size-legacySmall);
 	transition: all 200ms;
 	text-decoration: none;
-}
-
-.next-page {
 	z-index: 1;
 }
 
@@ -214,10 +220,32 @@ main {
 	color: white;
 }
 
-#playlist {
+.content {
 	border-radius: 12px;
 	max-width: 28rem;
 	box-shadow: -5px 5px rgba(129, 238, 156, 0.288);
+}
+
+.collapsible {
+	width: fit-content;
+	padding: var(--size-padding);
+	border-radius: var(--size-small);
+	font-size: var(--size-small);
+	border: solid 5px rgb(121, 187, 77);
+	background-color: rgb(137, 240, 112);
+	cursor: pointer;
+	color: rgb(56, 50, 50);
+	text-shadow: -5px 5px rgba(94, 204, 66, 0.61);
+	z-index: 1;
+	transition: all 200ms ease-out;
+}
+
+/* active class will be added in JavaScript */
+
+.active,
+.collapsible:hover {
+	background-color: rgb(137, 212, 87);
+	transform: translate(5px, -5px);
 }
 
 .gradient {
