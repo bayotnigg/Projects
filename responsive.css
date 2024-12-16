@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+	.hello {
+		font-size: 1.5rem;
+	}
+	#playlist {
+		border-radius: 12px;
+		width: 28rem;
+	}
+}

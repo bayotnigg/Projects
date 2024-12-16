@@ -1,0 +1,91 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-image: linear-gradient(
+		rgb(173, 233, 113),
+		palevioletred,
+		palevioletred
+	);
+}
+header {
+	background-color: pink;
+	text-align: center;
+	padding: 15px;
+	border-radius: 25px;
+}
+
+.navbar {
+	background-color: rgb(247, 168, 211);
+	height: 75px;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 2rem;
+}
+
+.navbar-inner {
+	background-color: rgb(173, 233, 113);
+	width: 100%;
+	border-radius: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.button-input:hover {
+	transform: translateY(10px);
+}
+
+.text-input {
+	color: white;
+	text-shadow: -5px 5px rgba(241, 132, 192, 0.486);
+	text-decoration: none;
+}
+
+.lihanna p {
+	padding: 15px;
+}
+
+.title {
+	font-size: 1.8rem;
+}
+
+main {
+	background-color: pink;
+	text-align: center;
+	border-radius: 25px;
+}
+footer {
+	background-color: pink;
+	text-align: center;
+	border-radius: 25px;
+}
+
+img {
+	border-radius: 50px;
+}
+
+.text {
+	font-size: 1.5rem;
+}
+
+.leigh {
+	font-size: 1.5rem;
+}
+
+.lihanna {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+.leigh-span {
+	background-color: rgb(247, 163, 177);
+	width: fit-content;
+}
