@@ -16,6 +16,32 @@
 	pointer-events: none;
 }
 
+.yay::before {
+	content: "LEIGH AND JULIAN";
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	position: absolute;
+	pointer-events: none;
+}
+
+.title-main::before {
+	content: "Our Playlist :<";
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	position: absolute;
+	pointer-events: none;
+}
+
+/* new property */
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
 /* default sheets */
 
 * {
@@ -33,6 +59,7 @@ html {
 
 .background-first {
 	background-image: url(Images/yay.png);
+	z-index: -2;
 }
 
 .background-second {
@@ -149,7 +176,28 @@ main {
 	font-size: var(--size-legacySmall);
 	transition: all 200ms;
 	text-decoration: none;
-	z-index: 1;
+	position: relative;
+	z-index: 2;
+}
+
+.next-page::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(248, 115, 166);
+	inset: 0;
+	margin: auto;
+	translate: -4%;
+	z-index: -5;
+	padding: 10px;
+	border-radius: 15px;
+	opacity: 50%;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	position: absolute;
+	pointer-events: none;
+	opacity: 50%;
 }
 
 .next-page:hover {
@@ -224,6 +272,7 @@ main {
 	border-radius: 12px;
 	max-width: 28rem;
 	box-shadow: -5px 5px rgba(129, 238, 156, 0.288);
+	display: none;
 }
 
 .collapsible {
