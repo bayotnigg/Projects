@@ -31,3 +31,12 @@
 		transform: rotate(360deg);
 	}
 }
+
+@keyframes spin {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
