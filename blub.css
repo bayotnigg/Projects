@@ -1,0 +1,293 @@
+:root {
+	--font-small: 1rem;
+	--font-mid-small: 1.5rem;
+	--font-mid: 2rem;
+	--font-big: 3rem;
+	--padding-size: 1rem;
+	--padding-size-small: 0.8rem;
+	--padding-size-reserve: 0.3125rem;
+	--negative-var: -0.3125rem;
+	--color-first: rgb(139, 139, 212);
+	--angle: 0deg;
+	--black-gradient: rgba(0, 0, 0, 0.2);
+}
+
+/* sidetext */
+
+.hello {
+	display: flex;
+	height: 100%;
+	position: absolute;
+	align-items: center;
+	font-size: 1.5rem;
+	pointer-events: none;
+}
+
+.yay {
+	writing-mode: vertical-lr;
+	margin-left: 45px;
+	color: rgba(255, 255, 255, 0.164);
+	position: inherit;
+}
+
+/* angle property */
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+/* blur */
+
+::before {
+	opacity: 50%;
+	pointer-events: none;
+}
+
+.yay::before {
+	content: attr(data-text);
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	pointer-events: none;
+	opacity: 100%;
+}
+
+.main-text::before {
+	content: attr(data-text);
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+}
+
+.nav::before {
+	content: "Happy Monthday";
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+}
+
+em.bold::before {
+	content: attr(data-text);
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	opacity: 80%;
+}
+
+.redirect-back::before {
+	content: attr(data-text);
+	position: absolute;
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	opacity: 80%;
+}
+
+.img-container.anim.bob::before,
+.img-container.anim.bob::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 37%;
+	border-radius: var(--padding-size);
+	padding: var(--padding-size-reserve);
+	translate: 0rem var(--negative-var);
+	background-image: conic-gradient(
+		from var(--angle),
+		var(--color-first),
+		rgb(240, 84, 144),
+		var(--color-first)
+	);
+	animation: 3s spin linear infinite;
+	z-index: -1;
+	box-shadow: -10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.img-container::before {
+	-webkit-filter: blur(8px);
+	filter: blur(8px);
+	opacity: 90%;
+}
+
+/* hovers */
+
+.container-text button:hover {
+	transform: translate(var(--padding-size-reserve), var(--negative-var));
+}
+
+.redirect-back:hover {
+	transform: translate(var(--padding-size-reserve), var(--negative-var));
+	color: rgb(238, 238, 77);
+}
+
+/* gradient class */
+.gradient {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.45),
+		rgba(0, 0, 0, 0)
+	);
+	height: 100vh;
+}
+
+.backwards-gradient {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.45),
+		rgba(0, 0, 0, 0.7)
+	);
+	height: 100vh;
+}
+
+.background {
+	background-image: linear-gradient(
+		var(--color-first),
+		rgb(223, 134, 149) 170%
+	);
+	height: 100vh;
+}
+
+/* base stylesheet */
+
+* {
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+body,
+html {
+	height: 100%;
+	color: white;
+}
+
+body {
+	background-image: linear-gradient(rgb(84, 84, 212), var(--color-first));
+}
+
+/* navbar */
+
+header {
+	padding-top: 55px;
+	padding-bottom: 30px;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.nav {
+	font-size: var(--font-mid);
+	text-decoration: none;
+	color: white;
+	pointer-events: none;
+	text-shadow: -5px 5px rgba(0, 0, 0, 0.247);
+	position: relative;
+}
+
+.redirect-back {
+	position: absolute;
+	color: white;
+	font-size: var(--font-mid-small);
+	text-decoration: none;
+	inset: 0;
+	margin: 3.438rem;
+	margin-right: auto;
+	width: fit-content;
+	height: fit-content;
+	transition: all 0.2s;
+	text-shadow: var(--negative-var) var(--padding-size-reserve)
+		var(--black-gradient);
+}
+
+em.bold {
+	color: rgb(248, 115, 166);
+	text-decoration: underline rgb(248, 115, 166) 2px;
+	font-weight: 700;
+}
+
+.bold {
+	color: rgb(248, 115, 166);
+	font-weight: 700;
+}
+
+/* main */
+
+main {
+	padding: var(--padding-size);
+}
+
+.inline-first {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 55px;
+}
+
+.main-text {
+	font-size: var(--font-big);
+	position: relative;
+	text-shadow: -5px 5px rgba(0, 0, 0, 0.301);
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.inner-text {
+	font-size: 1.2rem;
+	text-shadow: -3px 3px rgba(248, 115, 166, 0.4);
+	line-break: auto;
+}
+
+.blub-image {
+	width: 40%;
+	border-radius: var(--padding-size);
+	height: 100%;
+}
+
+.img-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	padding-right: 55px;
+}
+
+/* glass effect */
+
+.container-text {
+	padding: var(--padding-size);
+	width: 50%;
+	text-align: center;
+	padding: 35px;
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.4),
+		rgba(151, 151, 151, 0.4)
+	);
+	border-radius: var(--padding-size);
+	box-shadow: var(--padding-size-reserve) var(--padding-size-reserve)
+		var(--black-gradient);
+}
+
+.container-text button {
+	font-size: 1.3rem;
+	border-radius: var(--padding-size);
+	border: solid 0.25rem rgb(248, 115, 166);
+	cursor: pointer;
+	margin-top: 2rem;
+	padding: var(--padding-size-small);
+	background-color: rgba(255, 255, 255, 0.993);
+	transition: all 0.2s;
+	box-shadow: var(--negative-var) var(--padding-size-reserve)
+		var(--black-gradient);
+}
+
+/* next page */
+
+#page-two {
+	padding: 3.438rem;
+}
