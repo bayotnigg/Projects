@@ -74,10 +74,8 @@
 								site!
 							</p>
 							<p class="text-left poppins-regular">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								Voluptatem, quaerat delectus! Iusto suscipit odio quis
-								distinctio fugiat. Quam iste dolor cupiditate ad mollitia vitae
-								fuga, voluptas quia corrupti, natus eum. <br />
+								This site was created on December 5th, 2024. <br />
+								Created by Julian and Leighanna as a place where they can
 								<br />
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 								Voluptatem, quaerat delectus! Iusto suscipit odio quis
@@ -91,7 +89,9 @@
 						<p class="text-right-main poppins-regular">JuliHanna :&lt;</p>
 						<br />
 						<div class="inner-right">
-							<p class="title-right playfair-display-regular">Title</p>
+							<p class="title-right playfair-display-regular">
+								Julian & <em class="bold">Leighanna</em>
+							</p>
 							<p class="text-right poppins-regular">
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 								Voluptatem, quaerat delectus! Iusto suscipit odio quis
@@ -116,10 +116,12 @@
 		<!-- Second Background -->
 		<div class="background-second" id="page-second">
 			<main class="gradient">
-				<div class="section-us-main">
-					<p class="title-main montserrat-bold">Our Playlist :&lt;</p>
+				<div class="section-us-main" id="section-fist">
+					<div class="container-main-text">
+						<p class="title-main montserrat-bold">Our Playlist :&lt;</p>
+					</div>
 					<br />
-					<span class="coll-main">
+					<div class="coll-main">
 						<p class="text-main poppins-regular">
 							Made on the 5th of December 2024, made from love and connection
 							between us both, it is a platform sending indirect messages
@@ -137,7 +139,6 @@
 								View Playlist :&gt;
 							</button>
 						</div>
-						<div class="content blur"></div>
 						<iframe
 							class="content"
 							id="playlist"
@@ -149,10 +150,53 @@
 							allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 							title="playlist"
 						></iframe>
-					</span>
+					</div>
+					<div class="coll-main">
+						<p class="text-main poppins-regular">
+							Both of us have this playlist as our main and we update it with a
+							song or two every once in a while! <br />
+							<br />
+							Give the playlist a little listen :&lt; and yk we made this
+							playlist naman :&gt; <br />
+							<em class="bold playfair-display-bold">Leigh</em>, i love our
+							playlist :&gt; <br />
+							<br />
+							For the next section, we will introduce our children:
+							<br />
+							<em class="bold">Blub</em> and Exodus! :&gt;
+							<br />
+						</p>
+						<a href="#page-three">
+							<button
+								type="button"
+								class="next-page montserrat-bold"
+								id="next-page"
+							>
+								Next Page :&gt;
+							</button>
+						</a>
+					</div>
 				</div>
 			</main>
 		</div>
-		<script src="index.js"></script>
+		<a href="blub.html" class="next-page montserrat-bold" id="button">
+			Next Page -&gt;
+		</a>
+		<script>
+			const coll = document.getElementsByClassName("collapsible");
+			const content = document.getElementById("playlist");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
