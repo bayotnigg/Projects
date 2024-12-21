@@ -23,7 +23,6 @@
 	position: absolute;
 	-webkit-filter: blur(8px);
 	filter: blur(8px);
-	position: absolute;
 	pointer-events: none;
 }
 
@@ -32,7 +31,6 @@
 	position: absolute;
 	-webkit-filter: blur(8px);
 	filter: blur(8px);
-	position: absolute;
 	pointer-events: none;
 }
 
@@ -145,11 +143,14 @@ header {
 
 main {
 	max-width: 100%;
-	display: flex;
 	color: white;
+}
+
+.home {
+	gap: 1rem;
+	display: flex;
 	padding-left: 50px;
 	padding-right: 50px;
-	gap: 1rem;
 }
 
 .button-housing {
@@ -276,16 +277,17 @@ main {
 
 .coll-main {
 	backdrop-filter: blur(8px);
-	background-color: rgba(123, 247, 133, 0.144);
-	width: 50%;
+	background-color: rgba(123, 247, 133, 0.1);
 	padding: var(--size-padding);
 	border-radius: var(--size-padding);
 	z-index: 1;
 	transform: translate(var(--size-backdrop), var(--size-backdrop));
+	width: 45%;
+	margin-top: 4rem;
 }
 
 .coll-main::after {
-	background-color: rgba(122, 212, 104, 0.151);
+	background-color: rgba(122, 212, 104, 0.2);
 }
 
 .coll-main::after,
@@ -317,13 +319,6 @@ main {
 	background-color: rgba(161, 209, 151, 0.25);
 }
 
-.content {
-	border-radius: 12px;
-	max-width: 28rem;
-	box-shadow: -5px 5px rgba(129, 238, 156, 0.288);
-	display: none;
-}
-
 .collapsible {
 	width: fit-content;
 	padding: var(--size-padding);
@@ -338,6 +333,42 @@ main {
 	transition: all 200ms ease-out;
 }
 
+.gradient {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.45),
+		rgba(0, 0, 0, 0)
+	);
+	height: 100vh;
+}
+
+.container-main-text {
+	width: 100%;
+	margin-left: 4rem;
+}
+
+.section-us-main {
+	display: flex;
+	padding: 50px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: start;
+}
+/* me trying to figure out how to make collapsibles */
+
+#playlist {
+	border-radius: 12px;
+	max-width: max-content;
+	box-shadow: -5px 5px rgba(129, 238, 156, 0.288);
+	overflow: hidden;
+}
+
+.content {
+	border-radius: 12px;
+	max-width: 28rem;
+	box-shadow: -5px 5px rgba(129, 238, 156, 0.288);
+	display: none;
+}
 /* active class will be added in JavaScript */
 
 .active,
@@ -346,16 +377,8 @@ main {
 	transform: translate(5px, -5px);
 }
 
-.gradient {
-	background-image: linear-gradient(
-		rgba(0, 0, 0, 0.7),
-		rgba(0, 0, 0, 0.45),
-		rgba(0, 0, 0, 0)
-	);
-}
-
-.section-us-main {
-	display: flex;
-	flex-direction: column;
-	padding: 50px;
+#next-page {
+	font-size: var(--size-small);
+	margin-left: 39%;
+	margin-top: 4rem;
 }
