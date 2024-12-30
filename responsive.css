@@ -1,9 +1,40 @@
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
 	.hello {
 		font-size: 1.5rem;
 	}
 	#playlist {
-		border-radius: 12px;
-		width: 28rem;
+		width: 20rem;
+	}
+	:root {
+		--size-small: 0.75rem;
+		--size-legacySmall: 1.25rem;
+		--size-mid: 1.5rem;
+		--size-padding: 15px;
+		--size-big: 2rem;
+		--size-backdrop: 5px;
+		--size-backdrop-negative: -5px;
+	}
+	.left,
+	.left-three,
+	.right,
+	.right-three {
+		font-size: 1.5em;
+	}
+	.blur,
+	::after,
+	::before {
+		display: none;
+	}
+}
+
+@media (max-width: 700px) {
+	.pink-heart {
+		display: none;
+	}
+	[data-text="about-us"] {
+		display: none;
+	}
+	#playlist {
+		width: 14rem;
 	}
 }
