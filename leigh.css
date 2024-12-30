@@ -28,7 +28,7 @@ header {
 }
 
 .navbar-inner {
-	background-color: rgb(173, 233, 113);
+	background-color: rgba(149, 204, 93, 0.534);
 	width: 100%;
 	border-radius: 15px;
 	padding-left: 15px;
@@ -57,11 +57,16 @@ main {
 	background-color: pink;
 	text-align: center;
 	border-radius: 25px;
+	padding: 1.5rem;
 }
 footer {
 	background-color: pink;
 	text-align: center;
 	border-radius: 25px;
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 img {
@@ -70,6 +75,10 @@ img {
 
 .text {
 	font-size: 1.5rem;
+}
+
+footer .text {
+	width: 60%;
 }
 
 .leigh {
@@ -88,4 +97,8 @@ img {
 .leigh-span {
 	background-color: rgb(247, 163, 177);
 	width: fit-content;
+}
+
+.emoji {
+	transform: translateY(5px);
 }
