@@ -1,14 +1,28 @@
-const coll = document.getElementsByClassName("collapsible");
-const content = document.getElementById("playlist");
-var i;
+const button = document.querySelectorAll(".collapsible");
+const content = document.querySelector(".content");
+let i;
 
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function () {
+for (i = 0; i < button.length; i++) {
+	button[i].addEventListener("click", function () {
 		this.classList.toggle("active");
-		if (content.style.display === "block") {
-			content.style.display = "none";
-		} else {
-			content.style.display = "block";
-		}
+		content.classList.toggle("active");
 	});
 }
+
+//scroll anim
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry);
+		if (entry.isIntersecting) {
+			entry.target.classList.add("show");
+		} else {
+			entry.target.classList.remove("show");
+		}
+	});
+});
+
+const hiddenElems = document.querySelectorAll(".scroll");
+const hiddenElemsRight = document.querySelectorAll(".scroll-right");
+hiddenElems.forEach((el) => observer.observe(el));
+hiddenElemsRight.forEach((el) => observer.observe(el));
